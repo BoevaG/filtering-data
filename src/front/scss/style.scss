@@ -1,0 +1,138 @@
+@import "../../modules/scss/reset.scss";
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+$baseColor: #5c3777;
+
+html, body {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-webkit-user-drag: none;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Raleway';
+	line-height: 1;
+	color: $baseColor;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	box-sizing: border-box;
+	z-index: 0;
+	-webkit-backface-visibility: hidden;
+	position: relative;
+
+	@media screen and (max-width: 1060px) {
+		font-size: 90%;
+	}
+
+	@media screen and (max-width: 768px) {
+		font-size: 80%;
+	}
+}
+
+.flex {
+	display: flex;
+
+	&--row {
+		flex-flow: row;
+		justify-content: space-between;
+	}
+
+	&--column {
+		flex-flow: column;
+	}
+}
+
+.wrap {
+	position: relative;
+	width: 1060px;
+	height: 100%;
+	padding: 0 0.625em; /* 10/16 */
+	margin: 0 auto;
+
+	@media screen and (max-width: 1060px) {
+		width: 718px;
+	}
+
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
+}
+
+label {
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin: 40px 0;
+
+	input {
+		height: 40px;
+		width: 200px;
+		border-radius: 4px;
+		border: 1px solid $baseColor;
+		padding: 0 10px;
+		color: $baseColor;
+	}
+}
+
+table, th, td {
+   border: 1px solid $baseColor;
+}
+
+tr {
+	&:nth-of-type(odd) {
+		background: rgba(255, 245, 249 , .5);
+	}
+}
+
+td {
+	padding: 0 5px;
+	font-size: 11px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+th {
+	position: relative;
+	text-align: center;
+	height:50px;
+	padding: 0 5px;
+	vertical-align: middle;
+
+	a {
+		color: $baseColor;
+		width: 100%;
+		display: inline-block;
+	}
+
+	&.filtering {
+		width: 115px;
+		text-align: left;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			right: 0;
+			background: url('../img/filter.png') no-repeat center;
+			background-size: 20px;
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+
+select {
+	width: 70px;
+	font-size: 10px;
+	background: #ffffff;
+	color: $baseColor;
+	height: 30px;
+}

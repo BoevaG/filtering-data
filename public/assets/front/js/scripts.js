@@ -1,0 +1,1 @@
+!function(a){"use strict"}(jQuery);var app=angular.module("UsersApp",[]);app.controller("DataCtrl",["$scope","$http",function(a,b){b.get("http://jsonplaceholder.typicode.com/users").then(function(b){a.users=b.data,a.sortType="id",a.sortReverse=!1})}]);

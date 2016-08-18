@@ -1,0 +1,15 @@
+#Font {
+
+	.Arcadeclassic() {
+		font-family: 'arcadeclassic';
+	}
+}
+
+@font-face {
+	font-family: 'arcadeclassic';
+	src: url('../../../assets/front/fonts/arcadeclassic-webfont.woff2') format('woff2'),
+	url('../../../assets/front/fonts/arcadeclassic-webfont.woff') format('woff'),
+	url('../../../assets/front/fonts/arcadeclassic-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

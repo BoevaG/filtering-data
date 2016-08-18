@@ -1,0 +1,32 @@
+{
+	"domain": "cameron-and-wilding.loc",
+	"liveReloadPort": 35730,
+	"views": {
+		"front": {
+			"scss": {
+				"minify": true
+			},
+			"js": {
+				"minify": true,
+				"modules": [
+					
+				]
+			},
+			"templates": [
+				"app/views/front/*.php",
+				"public/*.php"
+			]
+		},
+		"admin": {
+			"scss": {
+				"minify": true
+			},
+			"js": {
+				"minify": true,
+			},
+			"templates": [
+				"app/views/admin/*.php"
+			]
+		}
+	}
+}
